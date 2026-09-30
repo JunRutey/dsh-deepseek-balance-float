@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="300" viewBox="0 0 640 300" font-family="-apple-system, 'Segoe UI', 'Microsoft YaHei', sans-serif">
+  <rect width="640" height="300" fill="#17171d"/>
+  <g opacity="0.35">
+    <rect x="16" y="16" width="150" height="268" rx="10" fill="#20202a"/>
+    <rect x="36" y="40" width="110" height="10" rx="5" fill="#33333f"/>
+    <rect x="36" y="62" width="86" height="10" rx="5" fill="#2b2b36"/>
+    <rect x="36" y="84" width="98" height="10" rx="5" fill="#2b2b36"/>
+    <rect x="184" y="16" width="440" height="268" rx="10" fill="#1c1c24"/>
+  </g>
+
+  <!-- expanded card -->
+  <g transform="translate(392, 40)">
+    <rect width="216" height="126" rx="12" fill="#21212a" stroke="#3a3a48"/>
+    <circle cx="17" cy="19" r="3" fill="#3fbf7f"/>
+    <text x="28" y="23" fill="#9a9aa6" font-size="11">DeepSeek 余额</text>
+    <text x="176" y="23" fill="#9a9aa6" font-size="12">⟳</text>
+    <text x="196" y="23" fill="#9a9aa6" font-size="12">—</text>
+    <text x="10" y="70" fill="#9a9aa6" font-size="12">¥</text>
+    <text x="22" y="72" fill="#eeeef2" font-size="24" font-weight="600">128.42</text>
+    <text x="10" y="92" fill="#9a9aa6" font-size="11">赠送余额 ¥5.00</text>
+    <text x="10" y="112" fill="#9a9aa6" font-size="11">更新于 22:24:01</text>
+  </g>
+
+  <!-- collapsed pill -->
+  <g transform="translate(430, 196)">
+    <rect width="178" height="28" rx="14" fill="#21212a" stroke="#3a3a48"/>
+    <circle cx="17" cy="14" r="3" fill="#3fbf7f"/>
+    <text x="28" y="18" fill="#eeeef2" font-size="12">¥128.42</text>
+  </g>
+
+  <text x="196" y="76" fill="#6a6a78" font-size="12">DSH Web GUI</text>
+  <text x="196" y="96" fill="#6a6a78" font-size="12">shell.overlay slot</text>
+  <text x="196" y="212" fill="#6a6a78" font-size="11">collapsed form (click to expand)</text>
+</svg>

@@ -1,0 +1,10 @@
+# Bundle patch layer for dsh-deepseek-balance-float.
+#
+# Adding this package to the profile's `dsh.profile.bundles` applies exactly this
+# one mount row. The row is disabled automatically when a manual mount of the
+# same package already exists, so an accidental double mount cannot register the
+# same client module twice.
+- insert:
+    - id: deepseek-balance-float
+      name: 'dsh-deepseek-balance-float'
+      disabled: !!js "[...ctx.loader.entries()].some((e) => e.options.name === 'dsh-deepseek-balance-float' && e.options.id !== 'deepseek-balance-float' && !e.disabled)"

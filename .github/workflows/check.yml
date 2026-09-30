@@ -1,0 +1,21 @@
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      # The widget has no dependencies and no build step: the checked-in
+      # lib/client.js is the artifact DSH loads.
+      - name: Syntax check
+        run: node --check lib/client.js && node --check lib/index.js
+      - name: Contract check
+        run: node test/contract.mjs

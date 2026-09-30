@@ -1,0 +1,63 @@
+{
+  "name": "dsh-deepseek-balance-float",
+  "version": "0.1.0",
+  "description": "Floating DeepSeek account balance card for the DSH Web GUI: a draggable overlay widget that reads DSH's own account Remote, with no API key.",
+  "keywords": [
+    "dsh",
+    "deepseek",
+    "deepseek-harness",
+    "plugin",
+    "balance",
+    "widget",
+    "overlay"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots"
+      ],
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "test": "node test/contract.mjs",
+    "check": "node --check lib/client.js && node --check lib/index.js && node test/contract.mjs"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "lib/types/**/*.d.ts",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JunRutey/dsh-deepseek-balance-float.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JunRutey/dsh-deepseek-balance-float/issues"
+  },
+  "homepage": "https://github.com/JunRutey/dsh-deepseek-balance-float#readme"
+}
